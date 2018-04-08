@@ -1,0 +1,183 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:Windows
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:..\..\..\SpecialEffectsExamplesLibrary\SpecialEffectsExamples.Content.Pipeline\bin\Debug\SpecialEffectsExamplesLibrary.Content.Pipeline.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin Ch19p1_Particle.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Ch19p1_Particle.bmp
+
+#begin Ch19p1_ParticleTexture.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Ch19p1_ParticleTexture.png
+
+#begin JetExhaust.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:JetExhaust.png
+
+#begin Snowflake1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Snowflake1.png
+
+#begin Ch19p1_GroundTexture.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Ch19p1_GroundTexture.png
+
+#begin ParticleSystems/Faeries.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/Faeries.txt
+
+#begin ParticleSystems/BionicRGB.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/BionicRGB.txt
+
+#begin ParticleSystems/BlinkingGreenAndPurpleLights.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/BlinkingGreenAndPurpleLights.txt
+
+#begin ParticleSystems/Blue.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/Blue.txt
+
+#begin ParticleSystems/BlueAndRed.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/BlueAndRed.txt
+
+#begin ParticleSystems/ColorfulSwirl.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/ColorfulSwirl.txt
+
+#begin ParticleSystems/DualSwirl.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/DualSwirl.txt
+
+#begin ParticleSystems/FireJet.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/FireJet.txt
+
+#begin ParticleSystems/GreenAndPurplePulse.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/GreenAndPurplePulse.txt
+
+#begin ParticleSystems/LightningBugs.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/LightningBugs.txt
+
+#begin ParticleSystems/ParticleSystem.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/ParticleSystem.txt
+
+#begin ParticleSystems/PurdyColors.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/PurdyColors.txt
+
+#begin ParticleSystems/QuadSwirl.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/QuadSwirl.txt
+
+#begin ParticleSystems/RandomBouncers.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/RandomBouncers.txt
+
+#begin ParticleSystems/RGBCycleTest.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/RGBCycleTest.txt
+
+#begin ParticleSystems/RGBFade.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/RGBFade.txt
+
+#begin ParticleSystems/RGBTest.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/RGBTest.txt
+
+#begin ParticleSystems/Snow.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/Snow.txt
+
+#begin ParticleSystems/Swirl.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/Swirl.txt
+
+#begin ParticleSystems/TripleSwirl.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:ParticleSystems/TripleSwirl.txt
+
+#begin font.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:font.spritefont
+
