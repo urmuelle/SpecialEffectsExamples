@@ -1,5 +1,4 @@
 ﻿// <copyright file="MainWindowViewModel.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace AdvancedParticleSystem.ViewModel

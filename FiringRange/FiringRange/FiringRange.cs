@@ -1,5 +1,4 @@
 ﻿// <copyright file="FiringRange.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace FiringRange

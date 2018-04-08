@@ -1,5 +1,4 @@
 ﻿// <copyright file="ComplexExplosion.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace ComplexExplosion
@@ -82,7 +81,7 @@ namespace ComplexExplosion
             font = Content.Load<SpriteFont>("gamefont");
             fontSmall = Content.Load<SpriteFont>("gamefontSmall");
 
-            groundPlane = new GroundPlane(Content, graphics.GraphicsDevice, "ch20p3_GroundTexture", 256.0f, 256.0f, 8);
+            groundPlane = new GroundPlane(graphics.GraphicsDevice, Content, "ch20p3_GroundTexture", 256.0f, 256.0f, 8);
             explosionObject = Content.Load<Model>("Ch20p3_Object");
             objectRebirthTimer = new Timer();
 
@@ -106,8 +105,8 @@ namespace ComplexExplosion
             }
 
             skyBox = new SkyBox(
-                Content,
                 GraphicsDevice,
+                Content,
                 "Ch20p3_SkyBox_Top",
                 "Ch20p3_SkyBox_Bottom",
                 "Ch20p3_SkyBox_Front",
@@ -121,7 +120,7 @@ namespace ComplexExplosion
             particleEmitter = Content.Load<ParticleEmitter>("Ch20p3_ParticleScript");
 
             // vary shockwave thickness, speed, and lifetime to taste
-            shockwave = new Shockwave(Content, GraphicsDevice, "Ch20p3_Shockwave", 10.0f, 4.0f, 16, 6.0f, 1.0f)
+            shockwave = new Shockwave(GraphicsDevice, Content, "Ch20p3_Shockwave", 10.0f, 4.0f, 16, 6.0f, 1.0f)
             {
                 Position = new Vector3(0.0f, 4.0f, 0.0f)
             };
@@ -131,7 +130,7 @@ namespace ComplexExplosion
 
             camera = new UserControlledCamera
             {
-                Position = new Vector3(0.0f, 7.0f, -20.0f)
+                Position = new Vector3(0.0f, 7.0f, 20.0f)
             };
         }
 
@@ -188,7 +187,7 @@ namespace ComplexExplosion
             GraphicsDevice.SamplerStates[1] = SamplerState.PointClamp;
 
             // draw skybox
-            skyBox.Draw(GraphicsDevice, gameTime, world, view, projection);
+            skyBox.Draw(GraphicsDevice, world, view, projection);
 
             // Draw explosion
             if (objectRebirthTimer.IsRunning())
@@ -198,8 +197,8 @@ namespace ComplexExplosion
                     explosionSprite[q].Draw(GraphicsDevice, view, projection);
                 }
 
-                shockwave.Draw(view, projection, GraphicsDevice);
-                particleEmitter.Draw(gameTime, view, projection, GraphicsDevice);
+                shockwave.Draw(GraphicsDevice, view, projection);
+                particleEmitter.Draw(GraphicsDevice, gameTime, view, projection);
             }
 
             // Write information

@@ -1,5 +1,4 @@
 ﻿// <copyright file="SimpleParticleSystemContentImporter.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace SpecialEffectsExamplesLibrary.Content.Pipeline.ParticleSystemProperties

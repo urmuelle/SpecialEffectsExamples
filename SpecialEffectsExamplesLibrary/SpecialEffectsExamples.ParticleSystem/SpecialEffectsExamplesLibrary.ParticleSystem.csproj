@@ -69,9 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\MonoGame.ruleset">
+    <AdditionalFiles Include="..\..\MonoGame.ruleset">
       <Link>MonoGame.ruleset</Link>
-    </None>
+    </AdditionalFiles>
     <AdditionalFiles Include="..\..\stylecop.json">
       <Link>stylecop.json</Link>
     </AdditionalFiles>

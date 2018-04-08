@@ -1,5 +1,4 @@
 ﻿// <copyright file="PlasmaGun.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace FiringRange
@@ -76,27 +75,6 @@ namespace FiringRange
 
         public override void Draw(GraphicsDevice graphicsDevice, Camera camera, Matrix projectionMatrix, GameTime gameTime)
         {
-            /*
-            // create a light
-            {
-                D3DLIGHT8 light; ZeroMemory(&light, sizeof(D3DLIGHT8));
-
-                // plasma gun looks metallic & while
-                D3DUtil_InitLight(light, D3DLIGHT_DIRECTIONAL, -10.0f, 20.0f, -20.0f);
-                light.Ambient.a = 1.0f;
-                light.Ambient.g = 0.1f;
-                light.Ambient.b = light.Ambient.r = 0.0f;
-                light.Diffuse.a = 1.0f;
-                light.Diffuse.g = 0.3f;
-                light.Diffuse.b = light.Diffuse.r = 0.0f;
-                light.Direction = D3DXVECTOR3(1.0f, -1.0f, 1.0f);
-
-                m_pd3dDevice->SetRenderState(D3DRS_LIGHTING, TRUE);
-                m_pd3dDevice->SetLight(0, &light);
-                m_pd3dDevice->LightEnable(0, true);
-            }
-            */
-
             // render gun model
             Vector3 translation;
 
@@ -131,7 +109,13 @@ namespace FiringRange
                 // advanced visuals.
                 foreach (BasicEffect effect in mesh.Effects)
                 {
-                    effect.LightingEnabled = false;
+                    // Create a light
+                    // Plasma gun looks metallic & white
+                    effect.LightingEnabled = true;
+                    effect.AmbientLightColor = new Vector3(0.0f, 0.1f, 0.0f);
+                    effect.DirectionalLight0.DiffuseColor = new Vector3(0.3f, 0.0f, 0.0f);
+                    effect.DirectionalLight0.Direction = new Vector3(1, -1, 1);
+                    effect.DirectionalLight0.SpecularColor = new Vector3(0.1f, 1.0f, 0.1f);
                     effect.World = worldMatrix;
                     effect.Projection = projectionMatrix;
                     effect.View = camera.ViewMatrix;

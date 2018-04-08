@@ -1,5 +1,4 @@
 ﻿// <copyright file="ExplosionCluster.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace ExplosionCluster
@@ -75,7 +74,7 @@ namespace ExplosionCluster
             font = Content.Load<SpriteFont>("gamefont");
             fontSmall = Content.Load<SpriteFont>("gamefontSmall");
 
-            groundPlane = new GroundPlane(Content, graphics.GraphicsDevice, "ch20p2_GroundTexture", 256.0f, 256.0f, 8);
+            groundPlane = new GroundPlane(graphics.GraphicsDevice, Content, "ch20p2_GroundTexture", 256.0f, 256.0f, 8);
             explosionObject = Content.Load<Model>("Ch20p2_Object");
             objectRebirthTimer = new Timer();
 
@@ -103,17 +102,8 @@ namespace ExplosionCluster
 
             camera = new UserControlledCamera
             {
-                Position = new Vector3(0.0f, 4.0f, -15.0f)
+                Position = new Vector3(0.0f, 4.0f, 15.0f)
             };
-        }
-
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// game-specific content.
-        /// </summary>
-        protected override void UnloadContent()
-        {
-            // TODO: Unload any non ContentManager content here
         }
 
         /// <summary>
@@ -145,13 +135,12 @@ namespace ExplosionCluster
         {
             GraphicsDevice.Clear(Color.Black);
 
-            //Matrix view = Matrix.CreateLookAt(new Vector3(0, 4, -15), new Vector3(0, 1, 0), new Vector3(0, 1, 0));
             Matrix projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45), 800f / 480f, 0.01f, 100f);
             Matrix world = Matrix.Identity;
 
             Matrix view = camera.ViewMatrix;
 
-            groundPlane.Draw(view, projection, GraphicsDevice);
+            groundPlane.Draw(GraphicsDevice, view, projection);
 
             world = Matrix.CreateTranslation(0, 4, 0);
             if (!objectRebirthTimer.IsRunning())

@@ -1,5 +1,5 @@
 ﻿// <copyright file="App.xaml.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
+
 // </copyright>
 
 namespace AdvancedParticleSystem

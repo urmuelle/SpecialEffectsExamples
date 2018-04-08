@@ -1,7 +1,10 @@
-﻿using System;
+﻿// <copyright file="Game1.cs" company="Urs Müller">
+// </copyright>
 
 namespace ParticleScene
 {
+    using System;
+
 #if WINDOWS || LINUX
     /// <summary>
     /// The main class.
@@ -15,7 +18,9 @@ namespace ParticleScene
         static void Main()
         {
             using (var game = new Game1())
+            {
                 game.Run();
+            }
         }
     }
 #endif

@@ -1,5 +1,4 @@
 ﻿// <copyright file="SkyBox.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace SpecialEffectsExamplesLibrary.Graphics
@@ -42,7 +41,7 @@ namespace SpecialEffectsExamplesLibrary.Graphics
         {
             size = 10.0f;
 
-            // Texturen einlesen
+            // Read in the textures
             textures[(int)BoxFace.Top] = contentManager.Load<Texture2D>(topTextureFilename);
             textures[(int)BoxFace.Bottom] = contentManager.Load<Texture2D>(bottomTextureFilename);
             textures[(int)BoxFace.Left] = contentManager.Load<Texture2D>(leftTextureFilename);
@@ -74,21 +73,9 @@ namespace SpecialEffectsExamplesLibrary.Graphics
 
             f = size * 0.5f;
 
-            // Kopie der Sichtmatrix erstellen und die Translation
-            // unberücksichtigt lassen, da der Himmel unendlich erscheinen soll
-            // unabhängig davon, wo wir uns im Level befinden
+            // Take a copy of the view matrix and "disable" translation
             Matrix view = viewMatrix;
             view.Translation = Vector3.Zero;
-
-            // Graphics Device zum Rendern der Primitive vorbereiten
-
-            // Tiefentest deaktivieren und Schreibschutz des Z-Buffers aktivieren
-            ////Beim Rendern der Sky Box sollen keine Tiefenwerte in den Z-Buffer geschrieben
-            ////werden, denn der Himmel liegt immer hinter allen anderen Objekten
-            ////this.GraphicsDevice.RenderState.DepthBufferEnable = false;
-            ////this.GraphicsDevice.RenderState.DepthBufferWriteEnable = false;
-            ////this.GraphicsDevice.DepthStencilState.DepthBufferEnable = false;
-            ////this.GraphicsDevice.DepthStencilState.DepthBufferWriteEnable = false;
 
             var shaderEffect = new BasicEffect(graphicsDevice)
             {
@@ -104,6 +91,8 @@ namespace SpecialEffectsExamplesLibrary.Graphics
                 CullMode = CullMode.None
             };
 
+            // Disable depth test and lock z - Buffer
+            // Sky Box is always behind all other objects
             graphicsDevice.RasterizerState = rasterizerState;
             graphicsDevice.BlendState = BlendState.Opaque;
             graphicsDevice.DepthStencilState = DepthStencilState.None;

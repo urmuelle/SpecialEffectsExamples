@@ -1,5 +1,4 @@
-﻿// <copyright file="RecyclingArrayTests.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="RecyclingArrayTests.cs" company="Urs Müller">
 // </copyright>
 
 namespace SpecialEffectsLibraryUnitTests

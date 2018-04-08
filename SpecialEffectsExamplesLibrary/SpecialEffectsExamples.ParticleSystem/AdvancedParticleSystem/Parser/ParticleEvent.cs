@@ -1,5 +1,4 @@
 ﻿// <copyright file="ParticleEvent.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace SpecialEffectsExamplesLibrary.ParticleSystem.AdvancedParticleSystem.Parser

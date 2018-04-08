@@ -1,5 +1,4 @@
 ﻿// <copyright file="MachineGun.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace FiringRange
@@ -61,29 +60,6 @@ namespace FiringRange
 
         public override void Draw(GraphicsDevice graphicsDevice, Camera camera, Matrix projectionMatrix, GameTime gameTime = null)
         {
-            // create a light
-            /*
-            {
-                D3DLIGHT8 light; ZeroMemory(&light, sizeof(D3DLIGHT8));
-
-                // Machine gun looks white
-                D3DUtil_InitLight(light, D3DLIGHT_DIRECTIONAL, -10.0f, 20.0f, -20.0f);
-                light.Ambient.a = 1.0f;
-                light.Ambient.g = 0.1f;
-                light.Ambient.b = 0.1f;
-                light.Ambient.r = 0.1f;
-                light.Diffuse.a = 1.0f;
-                light.Diffuse.g = 0.3f;
-                light.Diffuse.b = 0.3f;
-                light.Diffuse.r = 0.3f;
-                light.Direction = D3DXVECTOR3(1.0f, -1.0f, 1.0f);
-
-                m_pd3dDevice->SetRenderState(D3DRS_LIGHTING, TRUE);
-                m_pd3dDevice->SetLight(0, &light);
-                m_pd3dDevice->LightEnable(0, true);
-            }
-            */
-
             // if firing, render machinegun flare
             if (Timer.IsRunning())
             {
@@ -114,23 +90,6 @@ namespace FiringRange
                     Projection = projectionMatrix,
                     View = camera.ViewMatrix,
                 };
-
-                /*
-                m_pd3dDevice->SetRenderState(D3DRS_LIGHTING, FALSE);
-                m_pd3dDevice->SetRenderState(D3DRS_ZENABLE, FALSE);
-                m_pd3dDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, TRUE);
-                m_pd3dDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_ONE);
-                m_pd3dDevice->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_ONE);
-
-                m_pd3dDevice->SetTextureStageState(0, D3DTSS_COLORARG1, D3DTA_TEXTURE);
-                m_pd3dDevice->SetTextureStageState(0, D3DTSS_COLOROP, D3DTOP_SELECTARG1);
-
-                m_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAARG1, D3DTA_TEXTURE);
-                m_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAOP, D3DTOP_SELECTARG1);
-
-                m_pd3dDevice->SetTextureStageState(1, D3DTSS_COLOROP, D3DTOP_DISABLE);
-                m_pd3dDevice->SetTextureStageState(1, D3DTSS_ALPHAOP, D3DTOP_DISABLE);
-                */
 
                 foreach (EffectPass pass in effect.CurrentTechnique.Passes)
                 {
@@ -167,7 +126,13 @@ namespace FiringRange
                 // advanced visuals.
                 foreach (BasicEffect effect in mesh.Effects)
                 {
-                    effect.LightingEnabled = false;
+                    // create a light
+                    // Machine gun looks white
+                    effect.LightingEnabled = true;
+                    effect.AmbientLightColor = new Vector3(0.1f, 0.1f, 0.1f);
+                    effect.DirectionalLight0.DiffuseColor = new Vector3(0.3f, 0.3f, 0.3f);
+                    effect.DirectionalLight0.Direction = new Vector3(1, -1, 1);  // coming along the x-axis
+                    effect.DirectionalLight0.SpecularColor = new Vector3(0.0f, 1.0f, 1.0f); // with green highlights
                     effect.World = worldMatrix;
                     effect.Projection = projectionMatrix;
                     effect.View = camera.ViewMatrix;

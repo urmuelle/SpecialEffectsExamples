@@ -1,5 +1,4 @@
 ﻿// <copyright file="ParticleEventVelocityZ.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace AdvancedParticleSystem.ParticleSystem.Parser

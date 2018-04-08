@@ -1,7 +1,5 @@
 ﻿// <copyright file="AnimationSequence.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
-// <author>Urs Müller</author>
 
 namespace SpecialEffectsExamplesLibrary.Animation
 {

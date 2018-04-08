@@ -1,5 +1,4 @@
 ﻿// <copyright file="LaserGun.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace FiringRange
@@ -98,29 +97,6 @@ namespace FiringRange
 
         public override void Draw(GraphicsDevice graphicsDevice, Camera camera, Matrix projectionMatrix, GameTime gameTime)
         {
-            /*
-            // create a light
-            {
-                D3DLIGHT8 light; ZeroMemory(&light, sizeof(D3DLIGHT8));
-
-                // Laser gun looks red
-                D3DUtil_InitLight(light, D3DLIGHT_DIRECTIONAL, -10.0f, 20.0f, -20.0f);
-                light.Ambient.a = 1.0f;
-                light.Ambient.g = 0.0f;
-                light.Ambient.b = 0.0f;
-                light.Ambient.r = 0.1f;
-                light.Diffuse.a = 1.0f;
-                light.Diffuse.g = 0.0f;
-                light.Diffuse.b = 0.0f;
-                light.Diffuse.r = 0.3f;
-                light.Direction = D3DXVECTOR3(1.0f, -1.0f, 1.0f);
-
-                m_pd3dDevice->SetRenderState(D3DRS_LIGHTING, TRUE);
-                m_pd3dDevice->SetLight(0, &light);
-                m_pd3dDevice->LightEnable(0, true);
-            }
-            */
-
             // if firing, render laser
             if (Timer.IsRunning())
             {
@@ -177,19 +153,7 @@ namespace FiringRange
                 graphicsDevice.RasterizerState = rasterizerState;
                 graphicsDevice.DepthStencilState = DepthStencilState.Default;
                 graphicsDevice.BlendState = BlendState.AlphaBlend;
-                graphicsDevice.SamplerStates[0] = SamplerState.LinearWrap;
-
-                /*
-                m_pd3dDevice->SetTextureStageState(0, D3DTSS_COLORARG1, D3DTA_TEXTURE);
-                m_pd3dDevice->SetTextureStageState(0, D3DTSS_COLOROP, D3DTOP_SELECTARG1);
-
-                m_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAARG1, D3DTA_TEXTURE);
-                m_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAARG2, D3DTA_DIFFUSE);
-                m_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAOP, D3DTOP_MODULATE);
-
-                m_pd3dDevice->SetTextureStageState(1, D3DTSS_COLOROP, D3DTOP_DISABLE);
-                m_pd3dDevice->SetTextureStageState(1, D3DTSS_ALPHAOP, D3DTOP_DISABLE);
-                */
+                graphicsDevice.SamplerStates[0] = SamplerState.LinearWrap;               
 
                 // Activate the particle effect.
                 foreach (EffectPass pass in shaderEffect.CurrentTechnique.Passes)
@@ -223,7 +187,7 @@ namespace FiringRange
 
             var worldMatrixTemp = AssembleWorldMatrix(camera, translation);
 
-            graphicsDevice.BlendState = BlendState.Additive;
+            graphicsDevice.BlendState = BlendState.Opaque;
             graphicsDevice.DepthStencilState = DepthStencilState.Default;
             graphicsDevice.RasterizerState = RasterizerState.CullCounterClockwise;
 
@@ -234,7 +198,13 @@ namespace FiringRange
                 // advanced visuals.
                 foreach (BasicEffect effect in mesh.Effects)
                 {
-                    effect.LightingEnabled = false;
+                    // Create a light
+                    // Plasma gun looks metallic & white
+                    effect.LightingEnabled = true;
+                    effect.AmbientLightColor = new Vector3(0.0f, 0.0f, 0.1f);
+                    effect.DirectionalLight0.DiffuseColor = new Vector3(0.0f, 0.0f, 0.3f);
+                    effect.DirectionalLight0.Direction = new Vector3(1, -1, 1);
+                    effect.DirectionalLight0.SpecularColor = new Vector3(1.0f, 0.0f, 0.0f);
                     effect.World = worldMatrixTemp;
                     effect.Projection = projectionMatrix;
                     effect.View = camera.ViewMatrix;
@@ -246,15 +216,6 @@ namespace FiringRange
             // render particle system
             graphicsDevice.DepthStencilState = DepthStencilState.Default;
             graphicsDevice.BlendState = BlendState.AlphaBlend;
-
-            /*
-            m_pd3dDevice->SetTextureStageState(0, D3DTSS_COLORARG1, D3DTA_TEXTURE);
-            m_pd3dDevice->SetTextureStageState(0, D3DTSS_COLORARG2, D3DTA_DIFFUSE);
-            m_pd3dDevice->SetTextureStageState(0, D3DTSS_COLOROP, D3DTOP_MODULATE);
-
-            m_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAARG1, D3DTA_DIFFUSE);
-            m_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAOP, D3DTOP_SELECTARG1);
-            */
 
             particleEmitter.Draw(graphicsDevice, gameTime, camera.ViewMatrix, projectionMatrix);
         }

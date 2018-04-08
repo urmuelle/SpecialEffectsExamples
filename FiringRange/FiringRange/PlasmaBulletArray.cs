@@ -1,5 +1,4 @@
 ﻿// <copyright file="PlasmaBulletArray.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace FiringRange
@@ -55,33 +54,6 @@ namespace FiringRange
 
         public void RenderAll(GraphicsDevice graphicsDevice, Matrix worldMatrix, Matrix projectionMatrix, Camera camera)
         {
-            /*
-            m_pd3dDevice->SetRenderState(D3DRS_LIGHTING, FALSE);
-            m_pd3dDevice->SetRenderState(D3DRS_CULLMODE, D3DCULL_NONE);
-            m_pd3dDevice->SetRenderState(D3DRS_ZENABLE, FALSE);
-
-            m_pd3dDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, TRUE);
-            m_pd3dDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_ONE);
-            m_pd3dDevice->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_ONE);
-
-            m_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAARG1, D3DTA_TEXTURE);
-            m_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAARG2, D3DTA_DIFFUSE);
-            m_pd3dDevice->SetTextureStageState(0, D3DTSS_ALPHAOP, D3DTOP_SELECTARG1);
-
-            m_pd3dDevice->SetTextureStageState(0, D3DTSS_COLORARG1, D3DTA_TEXTURE);
-            m_pd3dDevice->SetTextureStageState(0, D3DTSS_COLOROP, D3DTOP_SELECTARG1);
-            */
-
-            /*
-            // now render!
-            var shaderEffect = new BasicEffect(graphicsDevice)
-            {
-                Texture = animation.GetCurFrameTexture(Timer),
-                World = worldMatrix,
-                LightingEnabled = false,
-            };
-            */
-
             // Set other Render States
             RasterizerState rasterizerState = new RasterizerState()
             {

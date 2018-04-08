@@ -1,5 +1,4 @@
 ﻿// <copyright file="D3DHelperFuncs.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace SpecialEffectsExamplesLibrary

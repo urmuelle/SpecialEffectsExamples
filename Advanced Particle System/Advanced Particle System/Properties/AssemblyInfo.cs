@@ -1,5 +1,5 @@
 ﻿// <copyright file="AssemblyInfo.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
+
 // </copyright>
 
 using System.Reflection;
