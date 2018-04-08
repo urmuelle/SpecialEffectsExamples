@@ -1,5 +1,4 @@
 ﻿// <copyright file="GlobalSuppressions.cs" company="Urs Müller">
-// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 //// This file is used by Code Analysis to maintain SuppressMessage
