@@ -1,0 +1,239 @@
+﻿<Window x:Class="ParticleProperties.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ParticleProperties"
+        xmlns:scene="clr-namespace:ParticleProperties.Model.Scene"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="603.453" Width="1125.78" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight">
+
+    <!-- See http://brianlagunas.com/a-better-way-to-data-bind-enums-in-wpf/ for explanation -->
+    <Window.Resources>
+        <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
+                        ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="scene:LocalBlendState"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="800" />
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <GroupBox Visibility="Visible" Header="System Properties" Grid.Row="0">
+                <Grid Width="280">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Margin="0,5,0,5">
+                        <TextBlock Text="Spawn Dir 1 (XYZ)"/>
+                    </StackPanel>
+                    <Grid Grid.Column="1" Grid.Row="0">
+                        <TextBox Name="SpawnDir1X" Width="40" HorizontalAlignment="Left" Margin="0,5,0,5" Text="{Binding SpawnDir1X, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                        <TextBox Name="SpawnDir1Y" Width="40" HorizontalAlignment="Center" Margin="0,5,0,5" Text="{Binding SpawnDir1Y, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                        <TextBox Name="SpawnDir1Z" Width="40" HorizontalAlignment="Right" Margin="0,5,0,5" Text="{Binding SpawnDir1Z, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Margin="0,5,0,5">
+                        <TextBlock Text="Spawn Dir 2 (XYZ)"/>
+                    </StackPanel>
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <TextBox Name="SpawnDir2X" Width="40" HorizontalAlignment="Left" Margin="0,5,0,5" Text="{Binding SpawnDir2X, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                        <TextBox Name="SpawnDir2Y" Width="40" HorizontalAlignment="Center" Margin="0,5,0,5" Text="{Binding SpawnDir2Y, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                        <TextBox Name="SpawnDir2Z" Width="40" HorizontalAlignment="Right" Margin="0,5,0,5" Text="{Binding SpawnDir2Z, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="2" Margin="0,5,0,5">
+                        <TextBlock Text="Gravity (XYZ)"/>
+                    </StackPanel>
+                    <Grid Grid.Column="1" Grid.Row="2">
+                        <TextBox Name="GravityX" Width="40" HorizontalAlignment="Left" Margin="0,5,0,5" Text="{Binding GravityX, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                        <TextBox Name="GravityY" Width="40" HorizontalAlignment="Center" Margin="0,5,0,5" Text="{Binding GravityY, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                        <TextBox Name="GravityZ" Width="40" HorizontalAlignment="Right" Margin="0,5,0,5" Text="{Binding GravityZ, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="3" Margin="0,5,0,5">
+                        <TextBlock Text="Position (XYZ)"/>
+                    </StackPanel>
+                    <Grid Grid.Column="1" Grid.Row="3">
+                        <TextBox Name="PositionX" Width="40" HorizontalAlignment="Left" Margin="0,5,0,5" Text="{Binding PositionX, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                        <TextBox Name="PositionY" Width="40" HorizontalAlignment="Center" Margin="0,5,0,5" Text="{Binding PositionY, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                        <TextBox Name="PositionZ" Width="40" HorizontalAlignment="Right" Margin="0,5,0,5" Text="{Binding PositionZ, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="4" Margin="0,5,0,5">
+                        <TextBlock Text="Emission Radius"/>
+                    </StackPanel>
+                    <Grid Grid.Column="1" Grid.Row="4">
+                        <TextBox Name="EmissionRadiusX" Width="40" HorizontalAlignment="Left" Margin="0,5,0,5" Text="{Binding EmissionRadiusX, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                        <TextBox Name="EmissionRadiusY" Width="40" HorizontalAlignment="Center" Margin="0,5,0,5" Text="{Binding EmissionRadiusY, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                        <TextBox Name="EmissionRadiusZ" Width="40" HorizontalAlignment="Right" Margin="0,5,0,5" Text="{Binding EmissionRadiusZ, StringFormat=N1, Mode=TwoWay}"></TextBox>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="5" Margin="0,5,0,5">
+                        <TextBlock Text="Source Blend"/>
+                    </StackPanel>
+                    <Grid Grid.Column="1" Grid.Row="5">
+                        <ComboBox Name="SourceBlendMode" Margin="0,5,0,5" ItemsSource="{Binding Source={StaticResource dataFromEnum}}" SelectedValue="{Binding SourceBlendMode, Mode=TwoWay}" />
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="6" Margin="0,5,0,5">
+                        <TextBlock Text="Dest Blend"/>
+                    </StackPanel>
+                    <Grid Grid.Column="1" Grid.Row="6">
+                        <ComboBox Name="DestBlendMode" Margin="0,5,0,5" ItemsSource="{Binding Source={StaticResource dataFromEnum}}" SelectedValue="{Binding DestBlendMode, Mode=TwoWay}"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="7" Margin="0,5,0,5">
+                        <TextBlock Text="Maximum Number of active Particles"/>
+                    </StackPanel>
+                    <Grid Grid.Column="1" Grid.Row="7">
+                        <TextBox Name="NumParticles" Width="40" HorizontalAlignment="Right" Margin="0,5,0,5" Text="{Binding NumParticles, StringFormat=N0, Mode=TwoWay}"></TextBox>
+                    </Grid>
+                </Grid>
+                
+                <!--
+                <DockPanel>
+                    <DockPanel DockPanel.Dock="Top">
+                        <TextBlock Text="Spawn Dir 1 (XYZ)"/>
+                        <TextBox/>
+                        <TextBox Width="50"></TextBox>
+                        <TextBox Width="50"></TextBox>
+                        <TextBox Width="50"></TextBox>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top">
+                        <TextBlock Text="Spawn Dir 1 (XYZ)"/>
+                        <TextBox/>
+                        <TextBox Width="50"></TextBox>
+                        <TextBox Width="50"></TextBox>
+                        <TextBox Width="50"></TextBox>
+                    </DockPanel>
+                </DockPanel>
+                -->
+            </GroupBox>
+            <GroupBox Visibility="Visible" Header="Particle Properties" Grid.Row="1">
+                <Grid Width="280">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Margin="0,5,0,5">
+                        <TextBlock Text=""/>
+                    </StackPanel>
+                    <TextBlock Text="R" Width="40" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0" Margin="0,5,0,5"/>
+                    <TextBlock Text="G" Width="40" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="0" Margin="0,5,0,5"/>
+                    <TextBlock Text="B" Width="40" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="0" Margin="0,5,0,5"/>
+                    <TextBlock Text="A" Width="40" HorizontalAlignment="Center" Grid.Column="5" Grid.Row="0" Margin="0,5,0,5"/>
+                    
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Margin="0,5,0,5">
+                        <TextBlock Text="Start Color 1"/>
+                    </StackPanel>
+                    <wpfTool:ColorPicker Name="StartColor1Picker" Grid.Column="1" Grid.Row="1" Margin="0,5,0,5" SelectedColor="{Binding StartColor1, Mode=TwoWay}"></wpfTool:ColorPicker>
+                    <TextBox Name="StartColor1R" Width="40" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="1" Margin="0,5,0,5" Text="{Binding Path=StartColor1.R, Mode=TwoWay}"/>
+                    <TextBox Name="StartColor1G" Width="40" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" Margin="0,5,0,5" Text="{Binding Path=StartColor1.G, Mode=TwoWay}"/>
+                    <TextBox Name="StartColor1B" Width="40" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="1" Margin="0,5,0,5" Text="{Binding Path=StartColor1.B, Mode=TwoWay}"/>
+                    <TextBox Name="StartColor1A" Width="40" HorizontalAlignment="Center" Grid.Column="5" Grid.Row="1" Margin="0,5,0,5" Text="{Binding Path=StartColor1.A, Mode=TwoWay}"/>
+                    
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="2" Margin="0,5,0,5">
+                        <TextBlock Text="Start Color 2"/>
+                    </StackPanel>
+                    <wpfTool:ColorPicker Name="StartColor2" Grid.Column="1" Grid.Row="2" Margin="0,5,0,5" SelectedColor="{Binding StartColor2, Mode=TwoWay}"></wpfTool:ColorPicker>
+                    <TextBox Name="StartColor2R" Width="40" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="2" Margin="0,5,0,5" Text="{Binding Path=StartColor2.R, Mode=TwoWay}"/>
+                    <TextBox Name="StartColor2G" Width="40" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="2" Margin="0,5,0,5" Text="{Binding Path=StartColor2.G, Mode=TwoWay}"/>
+                    <TextBox Name="StartColor2B" Width="40" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="2" Margin="0,5,0,5" Text="{Binding Path=StartColor2.B, Mode=TwoWay}"/>
+                    <TextBox Name="StartColor2A" Width="40" HorizontalAlignment="Center" Grid.Column="5" Grid.Row="2" Margin="0,5,0,5" Text="{Binding Path=StartColor2.A, Mode=TwoWay}"/>
+                    
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="3" Margin="0,5,0,5">
+                        <TextBlock Text="End Color 1"/>
+                    </StackPanel>
+                    <wpfTool:ColorPicker Name="EndColor1" Grid.Column="1" Grid.Row="3" Margin="0,5,0,5" SelectedColor="{Binding EndColor1, Mode=TwoWay}"></wpfTool:ColorPicker>
+                    <TextBox Name="EndColor1R" Width="40" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="3" Margin="0,5,0,5" Text="{Binding Path=EndColor1.R, Mode=TwoWay}"/>
+                    <TextBox Name="EndColor1G" Width="40" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="3" Margin="0,5,0,5" Text="{Binding Path=EndColor1.G, Mode=TwoWay}"/>
+                    <TextBox Name="EndColor1B" Width="40" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="3" Margin="0,5,0,5" Text="{Binding Path=EndColor1.B, Mode=TwoWay}"/>
+                    <TextBox Name="EndColor1A" Width="40" HorizontalAlignment="Center" Grid.Column="5" Grid.Row="3" Margin="0,5,0,5" Text="{Binding Path=EndColor1.A, Mode=TwoWay}"/>
+                    
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="4" Margin="0,5,0,5">
+                        <TextBlock Text="End Color 2"/>
+                    </StackPanel>
+                    <wpfTool:ColorPicker Name="EndColor2" Grid.Column="1" Grid.Row="4" Margin="0,5,0,5" SelectedColor="{Binding EndColor2, Mode=TwoWay}"></wpfTool:ColorPicker>
+                    <TextBox Name="EndColor2R" Width="40" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="4" Margin="0,5,0,5" Text="{Binding Path=EndColor2.R, Mode=TwoWay}"/>
+                    <TextBox Name="EndColor2G" Width="40" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="4" Margin="0,5,0,5" Text="{Binding Path=EndColor2.G, Mode=TwoWay}"/>
+                    <TextBox Name="EndColor2B" Width="40" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="4" Margin="0,5,0,5" Text="{Binding Path=EndColor2.B, Mode=TwoWay}"/>
+                    <TextBox Name="EndColor2A" Width="40" HorizontalAlignment="Center" Grid.Column="5" Grid.Row="4" Margin="0,5,0,5" Text="{Binding Path=EndColor2.A, Mode=TwoWay}"/>
+                    
+                    <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2"  Grid.Column="0" Grid.Row="5" Margin="0,5,0,5">
+                        <TextBlock Text="Emit Rate (p/s)"/>
+                    </StackPanel>
+                    <TextBlock Text="Min:" Width="40" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="5" Margin="0,5,0,5"/>
+                    <TextBox Name="EmitRateMin" Width="40" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="5" Margin="0,5,0,5" Text="{Binding EmitRateMin, StringFormat=N1, Mode=TwoWay}"/>
+                    <TextBlock Text="Max:" Width="40" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="5" Margin="0,5,0,5"/>
+                    <TextBox Name="EmitRateMax" Width="40" HorizontalAlignment="Center" Grid.Column="5" Grid.Row="5" Margin="0,5,0,5" Text="{Binding EmitRateMax, StringFormat=N1, Mode=TwoWay}"/>
+                    
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="6" Margin="0,5,0,5">
+                        <TextBlock Text="Part Size"/>
+                    </StackPanel>
+                    <TextBlock Text="Min:" Width="40" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="6" Margin="0,5,0,5"/>
+                    <TextBox Name="ParticleSizeMin" Width="40" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="6" Margin="0,5,0,5" Text="{Binding ParticleSizeMin, StringFormat=N1, Mode=TwoWay}"/>
+                    <TextBlock Text="Max:" Width="40" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="6" Margin="0,5,0,5"/>
+                    <TextBox Name="ParticleSizeMax" Width="40" HorizontalAlignment="Center" Grid.Column="5" Grid.Row="6" Margin="0,5,0,5" Text="{Binding ParticleSizeMax, StringFormat=N1, Mode=TwoWay}"/>
+                    
+                    <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="7" Margin="0,5,0,5">
+                        <TextBlock Text="Lifetime (secs)"/>
+                    </StackPanel>
+                    <TextBlock Text="Min:" Width="40" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="7" Margin="0,5,0,5"/>
+                    <TextBox Name="ParticleLifeTimeMin" Width="40" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="7" Margin="0,5,0,5" Text="{Binding ParticleLifeTimeMin, StringFormat=N1, Mode=TwoWay}"/>
+                    <TextBlock Text="Max:" Width="40" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="7" Margin="0,5,0,5"/>
+                    <TextBox Name="ParticleLifeTimeMax" Width="40" HorizontalAlignment="Center" Grid.Column="5" Grid.Row="7" Margin="0,5,0,5" Text="{Binding ParticleLifeTimeMax, StringFormat=N1, Mode=TwoWay}"/>
+                    
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="8" Margin="0,5,0,5">
+                        <TextBlock Text="Texture"/>
+                    </StackPanel>
+                    <ComboBox Name="TextureFileName" Margin="0,5,0,5" Grid.ColumnSpan="4" Grid.Column="2" Grid.Row="8" ItemsSource="{Binding TextureFileNames}" SelectedValue="{Binding TextureFileName, Mode=TwoWay}"/>
+                </Grid>
+            </GroupBox>
+            <DockPanel Grid.Row="2" Margin="0,5,0,5">
+                <Button Width="50" Margin="5,0,10,0" Command="{Binding LoadCommand}">Load</Button>
+                <Button Width="50" Margin="0,0,10,0" Command="{Binding SaveCommand}">Save</Button>
+                <Button Width="50" Margin="0,0,10,0" Command="{Binding ResetCommand}">Reset</Button>
+                <TextBlock Text="Show Ground" Margin="0,0,5,0"></TextBlock>
+                <CheckBox x:Name="CheckboxShowGround" IsChecked="{Binding ShowGround, Mode=TwoWay}"></CheckBox>
+            </DockPanel>
+        </Grid>
+        <scene:ParticleScene Width="800" Height="480" Grid.Column="1" x:Name="ParticleScene"/>
+    </Grid>
+</Window>

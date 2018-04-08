@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ParticleSystem>
+  <Position x="0.0000" y="2.0000" z="5.0000" />
+  <Gravity x="0.0000" y="0.0000" z="0.0000" />
+  <SpawnDir1 x="-1.0000" y="-1.0000" z="-1.0000" />
+  <SpawnDir2 x="1.0000" y="1.0000" z="1.0000" />
+  <StartColor1 r="1.0000" g="1.0000" b="0.0000" a="0.0000" />
+  <StartColor2 r="1.0000" g="1.0000" b="1.0000" a="1.0000" />
+  <EndColor1 r="0.0000" g="0.0000" b="0.0000" a="0.0000" />
+  <EndColor2 r="0.0000" g="0.0000" b="0.0000" a="1.0000" />
+  <EmitRate min="10.0000" max="10.0000" />
+  <EmitRadius x="5.0000" y="5.0000" z="5.0000" />
+  <Lifetime min="0.5000" max="1.5000" />
+  <Size min="1.0000" max="1.0000" />
+  <SrcBlend>D3DBLEND_ONE</SrcBlend>
+  <DestBlend>D3DBLEND_ONE</DestBlend>
+  <MaxParticles>30</MaxParticles>
+  <Texture>Ch18p2_ParticleTexture</Texture>
+</ParticleSystem>
