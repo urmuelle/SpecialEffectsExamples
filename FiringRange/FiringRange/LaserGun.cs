@@ -1,4 +1,5 @@
 ﻿// <copyright file="LaserGun.cs" company="Urs Müller">
+// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace FiringRange
@@ -153,7 +154,7 @@ namespace FiringRange
                 graphicsDevice.RasterizerState = rasterizerState;
                 graphicsDevice.DepthStencilState = DepthStencilState.Default;
                 graphicsDevice.BlendState = BlendState.AlphaBlend;
-                graphicsDevice.SamplerStates[0] = SamplerState.LinearWrap;               
+                graphicsDevice.SamplerStates[0] = SamplerState.LinearWrap;
 
                 // Activate the particle effect.
                 foreach (EffectPass pass in shaderEffect.CurrentTechnique.Passes)
