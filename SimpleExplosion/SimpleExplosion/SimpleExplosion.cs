@@ -1,4 +1,5 @@
 ﻿// <copyright file="SimpleExplosion.cs" company="Urs Müller">
+// Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
 namespace SimpleExplosion
