@@ -1,11 +1,12 @@
-﻿using System;
+﻿// <copyright file="Program.cs" company="Urs Müller">
+// Copyright (c) Urs Müller. All rights reserved.
+// </copyright>
 
-namespace SimpleParticleSystem_MG38
+namespace SimpleParticleSystem
 {
     public static class Program
     {
-        [STAThread]
-        static void Main()
+        public static void Main()
         {
             using (var game = new Game1())
                 game.Run();

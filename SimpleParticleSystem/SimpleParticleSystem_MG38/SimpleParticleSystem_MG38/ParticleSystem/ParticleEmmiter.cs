@@ -2,7 +2,7 @@
 // Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
-namespace SimpleParticleSystem_MG38.Particle_System
+namespace SimpleParticleSystem.Particle_System
 {
     using System;
     using System.Collections.Generic;

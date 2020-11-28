@@ -2,7 +2,7 @@
 // Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
-namespace SimpleParticleSystem_MG38.Graphics
+namespace SimpleParticleSystem.Graphics
 {
     using System;
     using Microsoft.Xna.Framework;

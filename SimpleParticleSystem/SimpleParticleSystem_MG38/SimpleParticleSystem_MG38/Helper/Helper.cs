@@ -2,7 +2,7 @@
 // Copyright (c) Urs Müller. All rights reserved.
 // </copyright>
 
-namespace SimpleParticleSystem_MG38.Helper
+namespace SimpleParticleSystem.Helper
 {
     using System;
 

@@ -1,11 +1,11 @@
-﻿namespace SimpleParticleSystem_MG38
+﻿namespace SimpleParticleSystem
 {
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
 
-    using SimpleParticleSystem_MG38.Graphics;
-    using SimpleParticleSystem_MG38.Particle_System;
+    using SimpleParticleSystem.Graphics;
+    using SimpleParticleSystem.Particle_System;
 
     /// <summary>
     /// This is the main type for your game.
