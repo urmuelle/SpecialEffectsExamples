@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleParticleSystem", "Simple Particle System\SimpleParticleSystem.csproj", "{F3A5931C-C2F4-46DE-8809-38576CD22F0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleParticleSystemUnitTests", "Simple Particle System Unit Tests\SimpleParticleSystemUnitTests.csproj", "{C316C8DB-847E-4F63-9A74-1905F7C4D7E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleParticleSystemUnitTests", "Simple Particle System Unit Tests\SimpleParticleSystemUnitTests.csproj", "{C316C8DB-847E-4F63-9A74-1905F7C4D7E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
