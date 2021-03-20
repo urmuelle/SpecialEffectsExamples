@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedParticleSystem", "Advanced Particle System\AdvancedParticleSystem.csproj", "{4D5781A3-9708-42F1-9947-5068C39815BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedParticleSystem", "AdvancedParticleSystem\AdvancedParticleSystem.csproj", "{4D5781A3-9708-42F1-9947-5068C39815BF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParticleScene", "ParticleScene\ParticleScene.csproj", "{041A9FFA-7042-4C9F-A50D-3042557CC8B6}"
 EndProject
