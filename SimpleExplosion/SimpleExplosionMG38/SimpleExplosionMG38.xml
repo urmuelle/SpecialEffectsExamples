@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleExplosionMG38</name>
+    </assembly>
+    <members>
+        <member name="T:SimpleExplosionMG38.Program">
+            <summary>
+            The main class.
+            </summary>
+        </member>
+        <member name="M:SimpleExplosionMG38.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:SimpleExplosionMG38.SimpleExplosion">
+            <summary>
+            This is the main type for your game.
+            </summary>
+        </member>
+        <member name="M:SimpleExplosionMG38.SimpleExplosion.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SimpleExplosionMG38.SimpleExplosion"/> class.
+            </summary>
+        </member>
+        <member name="M:SimpleExplosionMG38.SimpleExplosion.Initialize">
+            <summary>
+            Allows the game to perform any initialization it needs to before starting to run.
+            This is where it can query for any required services and load any non-graphic
+            related content.  Calling base.Initialize will enumerate through any components
+            and initialize them as well.
+            </summary>
+        </member>
+        <member name="M:SimpleExplosionMG38.SimpleExplosion.LoadContent">
+            <summary>
+            LoadContent will be called once per game and is the place to load
+            all of your content.
+            </summary>
+        </member>
+        <member name="M:SimpleExplosionMG38.SimpleExplosion.UnloadContent">
+            <summary>
+            UnloadContent will be called once per game and is the place to unload
+            game-specific content.
+            </summary>
+        </member>
+        <member name="M:SimpleExplosionMG38.SimpleExplosion.Update(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Allows the game to run logic such as updating the world,
+            checking for collisions, gathering input, and playing audio.
+            </summary>
+            <param name="gameTime">Provides a snapshot of timing values.</param>
+        </member>
+        <member name="M:SimpleExplosionMG38.SimpleExplosion.Draw(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            This is called when the game should draw itself.
+            </summary>
+            <param name="gameTime">Provides a snapshot of timing values.</param>
+        </member>
+    </members>
+</doc>
