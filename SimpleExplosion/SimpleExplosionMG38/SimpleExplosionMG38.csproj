@@ -10,9 +10,13 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Spieleprogrammierung\Monogame\Projekte\SpecialEffectsExamples\SimpleExplosion\SimpleExplosionMG38\SimpleExplosionMG38.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="..\..\stylecop.json" Link="stylecop.json" />
+    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
     <TrimmerRootAssembly Include="Microsoft.Xna.Framework.Content.ContentTypeReader" Visible="false" />

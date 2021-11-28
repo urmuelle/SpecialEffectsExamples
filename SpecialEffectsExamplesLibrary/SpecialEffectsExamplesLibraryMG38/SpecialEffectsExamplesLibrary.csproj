@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\SpecialEffectsExamplesLibrary\Animation\AnimationFrame.cs" Link="Animation\AnimationFrame.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\Animation\AnimationSequence.cs" Link="Animation\AnimationSequence.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\Animation\Sprite.cs" Link="Animation\Sprite.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\Camera\Camera.cs" Link="Camera\Camera.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\Camera\UserControlledCamera.cs" Link="Camera\UserControlledCamera.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\D3DHelperFuncs.cs" Link="D3DHelperFuncs.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\Graphics\GroundPlane.cs" Link="Graphics\GroundPlane.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\Graphics\Shockwave.cs" Link="Graphics\Shockwave.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\Graphics\SkyBox.cs" Link="Graphics\SkyBox.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\Helper.cs" Link="Helper.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\MinMax.cs" Link="MinMax.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\NumericExtensions.cs" Link="NumericExtensions.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\RecyclingArray.cs" Link="RecyclingArray.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\StringExtensions.cs" Link="StringExtensions.cs" />
+    <Compile Include="..\SpecialEffectsExamplesLibrary\Timer.cs" Link="Timer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1641">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Animation\" />
+    <Folder Include="Camera\" />
+    <Folder Include="Graphics\" />
+  </ItemGroup>
+</Project>
