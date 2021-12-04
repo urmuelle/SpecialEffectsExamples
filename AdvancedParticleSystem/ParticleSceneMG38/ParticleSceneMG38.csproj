@@ -28,9 +28,11 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
-    <Folder Include="Scene\" />
-    <Folder Include="ParticleSystem\" />
+    <Reference Include="SpecialEffectsExamplesLibrary">
+      <HintPath>..\..\SpecialEffectsExamplesLibrary\SpecialEffectsExamplesLibraryMG38\bin\Debug\netstandard2.0\SpecialEffectsExamplesLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecialEffectsExamplesLibrary.ParticleSystem">
+      <HintPath>..\..\SpecialEffectsExamplesLibrary\SpecialEffectsExamplesLibrary.ParticleSystemMG38\bin\Debug\netstandard2.0\SpecialEffectsExamplesLibrary.ParticleSystem.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

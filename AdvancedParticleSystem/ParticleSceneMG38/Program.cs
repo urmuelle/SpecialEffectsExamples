@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdvancedParticleSystem2019
+namespace ParticleSceneMG38
 {
     public static class Program
     {
