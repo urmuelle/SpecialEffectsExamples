@@ -1,0 +1,186 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:DesktopGL
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:..\..\..\SpecialEffectsExamplesLibrary\SpecialEffectsExamples.Content.PipelineMG38\bin\Debug\netstandard2.0\SpecialEffectsExamplesLibrary.Content.Pipeline.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin ../../FiringRange/Content/Ch21p1_DesertSkyboxBack.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_DesertSkyboxBack.bmp;Ch21p1_DesertSkyboxBack.bmp
+
+#begin ../../FiringRange/Content/Ch21p1_DesertSkyboxBottom.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_DesertSkyboxBottom.bmp;Ch21p1_DesertSkyboxBottom.bmp
+
+#begin ../../FiringRange/Content/Ch21p1_DesertSkyboxFront.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_DesertSkyboxFront.bmp;Ch21p1_DesertSkyboxFront.bmp
+
+#begin ../../FiringRange/Content/Ch21p1_DesertSkyboxLeft.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_DesertSkyboxLeft.bmp;Ch21p1_DesertSkyboxLeft.bmp
+
+#begin ../../FiringRange/Content/Ch21p1_DesertSkyboxRight.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_DesertSkyboxRight.bmp;Ch21p1_DesertSkyboxRight.bmp
+
+#begin ../../FiringRange/Content/Ch21p1_DesertSkyboxTop.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_DesertSkyboxTop.bmp;Ch21p1_DesertSkyboxTop.bmp
+
+#begin ../../FiringRange/Content/Ch21p1_GroundTexture.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_GroundTexture.bmp;Ch21p1_GroundTexture.bmp
+
+#begin ../../FiringRange/Content/Ch21p1_Gun.x
+/importer:XImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:../../FiringRange/Content/Ch21p1_Gun.x;Ch21p1_Gun.x
+
+#begin ../../FiringRange/Content/Ch21p1_Laser.dds
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_Laser.dds;Ch21p1_Laser.dds
+
+#begin ../../FiringRange/Content/Ch21p1_LaserParticle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_LaserParticle.png;Ch21p1_LaserParticle.png
+
+#begin ../../FiringRange/Content/Ch21p1_LaserScript.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../FiringRange/Content/Ch21p1_LaserScript.txt;Ch21p1_LaserScript.txt
+
+#begin ../../FiringRange/Content/Ch21p1_MachineGunFlare.dds
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_MachineGunFlare.dds;Ch21p1_MachineGunFlare.dds
+
+#begin ../../FiringRange/Content/Ch21p1_PlasmaBullet_01.dds
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../FiringRange/Content/Ch21p1_PlasmaBullet_01.dds;Ch21p1_PlasmaBullet_01.dds
+
+#begin ../../FiringRange/Content/gamefont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:../../FiringRange/Content/gamefont.spritefont;gamefont.spritefont
+
+#begin ../../FiringRange/Content/GamefontSmall.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:../../FiringRange/Content/GamefontSmall.spritefont;GamefontSmall.spritefont
+
