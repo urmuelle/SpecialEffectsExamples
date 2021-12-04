@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParticlePropertiesMG38", "ParticlePropertiesMG38\ParticlePropertiesMG38.csproj", "{E3A51743-2547-4E6B-8156-1D50E26B0446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParticleSceneMG38", "ParticleSceneMG38\ParticleSceneMG38.csproj", "{556F6970-4291-43B0-AE63-3302306581CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3A51743-2547-4E6B-8156-1D50E26B0446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A51743-2547-4E6B-8156-1D50E26B0446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A51743-2547-4E6B-8156-1D50E26B0446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A51743-2547-4E6B-8156-1D50E26B0446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{556F6970-4291-43B0-AE63-3302306581CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556F6970-4291-43B0-AE63-3302306581CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556F6970-4291-43B0-AE63-3302306581CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556F6970-4291-43B0-AE63-3302306581CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BF15C4B-3B75-4346-8481-3E318E24FB14}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,183 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:DesktopGL
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:..\..\..\SpecialEffectsExamplesLibrary\SpecialEffectsExamples.Content.PipelineMG38\bin\Debug\netstandard2.0\SpecialEffectsExamplesLibrary.Content.Pipeline.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin ../../ParticleScene/Content/Ch19p1_GroundTexture.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../ParticleScene/Content/Ch19p1_GroundTexture.png;Ch19p1_GroundTexture.png
+
+#begin ../../ParticleScene/Content/Ch19p1_Particle.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../ParticleScene/Content/Ch19p1_Particle.bmp;Ch19p1_Particle.bmp
+
+#begin ../../ParticleScene/Content/Ch19p1_ParticleTexture.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../ParticleScene/Content/Ch19p1_ParticleTexture.png;Ch19p1_ParticleTexture.png
+
+#begin ../../ParticleScene/Content/font.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:../../ParticleScene/Content/font.spritefont;font.spritefont
+
+#begin ../../ParticleScene/Content/JetExhaust.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../ParticleScene/Content/JetExhaust.png;JetExhaust.png
+
+#begin ../../ParticleScene/Content/ParticleSystems/BionicRGB.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/BionicRGB.txt;ParticleSystems/BionicRGB.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/BlinkingGreenAndPurpleLights.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/BlinkingGreenAndPurpleLights.txt;ParticleSystems/BlinkingGreenAndPurpleLights.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/Blue.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/Blue.txt;ParticleSystems/Blue.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/BlueAndRed.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/BlueAndRed.txt;ParticleSystems/BlueAndRed.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/ColorfulSwirl.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/ColorfulSwirl.txt;ParticleSystems/ColorfulSwirl.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/DualSwirl.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/DualSwirl.txt;ParticleSystems/DualSwirl.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/Faeries.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/Faeries.txt;ParticleSystems/Faeries.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/FireJet.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/FireJet.txt;ParticleSystems/FireJet.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/GreenAndPurplePulse.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/GreenAndPurplePulse.txt;ParticleSystems/GreenAndPurplePulse.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/LightningBugs.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/LightningBugs.txt;ParticleSystems/LightningBugs.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/ParticleSystem.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/ParticleSystem.txt;ParticleSystems/ParticleSystem.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/PurdyColors.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/PurdyColors.txt;ParticleSystems/PurdyColors.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/QuadSwirl.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/QuadSwirl.txt;ParticleSystems/QuadSwirl.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/RandomBouncers.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/RandomBouncers.txt;ParticleSystems/RandomBouncers.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/RGBCycleTest.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/RGBCycleTest.txt;ParticleSystems/RGBCycleTest.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/RGBFade.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/RGBFade.txt;ParticleSystems/RGBFade.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/RGBTest.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/RGBTest.txt;ParticleSystems/RGBTest.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/Snow.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/Snow.txt;ParticleSystems/Snow.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/Swirl.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/Swirl.txt;ParticleSystems/Swirl.txt
+
+#begin ../../ParticleScene/Content/ParticleSystems/TripleSwirl.txt
+/importer:AdvancedParticleSystemContentImporter
+/processor:AdvancedParticleSystemProcessor
+/build:../../ParticleScene/Content/ParticleSystems/TripleSwirl.txt;ParticleSystems/TripleSwirl.txt
+
+#begin ../../ParticleScene/Content/Snowflake1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../ParticleScene/Content/Snowflake1.png;Snowflake1.png
+

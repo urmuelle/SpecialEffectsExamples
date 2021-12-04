@@ -1,0 +1,74 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:DesktopGL
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:..\..\..\SpecialEffectsExamplesLibrary\SpecialEffectsExamples.Content.PipelineMG38\bin\Debug\netstandard2.0\SpecialEffectsExamplesLibrary.Content.Pipeline.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin ../../ParticleSceneLibrary/Content/ch18p1_GroundTexture.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../ParticleSceneLibrary/Content/ch18p1_GroundTexture.png;ch18p1_GroundTexture.png
+
+#begin ../../ParticleSceneLibrary/Content/ch18p1_Particle.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../ParticleSceneLibrary/Content/ch18p1_Particle.bmp;ch18p1_Particle.bmp
+
+#begin ../../ParticleSceneLibrary/Content/ch18p1_Particle.psd
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../ParticleSceneLibrary/Content/ch18p1_Particle.psd;ch18p1_Particle.psd
+
+#begin ../../ParticleSceneLibrary/Content/ch18p1_ParticleTexture.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../ParticleSceneLibrary/Content/ch18p1_ParticleTexture.png;ch18p1_ParticleTexture.png
+
+#begin ../../ParticleSceneLibrary/Content/test.xml
+/importer:ParticleSystemPropertiesContentImporter
+/processor:ParticleSystemPropertiesProcessor
+/build:../../ParticleSceneLibrary/Content/test.xml;test.xml
+
+#begin ../../ParticleSceneLibrary/Content/test2.xml
+/importer:ParticleSystemPropertiesContentImporter
+/processor:ParticleSystemPropertiesProcessor
+/build:../../ParticleSceneLibrary/Content/test2.xml;test2.xml
+
