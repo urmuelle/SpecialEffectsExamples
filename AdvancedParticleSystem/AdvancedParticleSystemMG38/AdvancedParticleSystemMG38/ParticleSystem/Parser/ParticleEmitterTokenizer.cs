@@ -1,7 +1,7 @@
 ﻿// <copyright file="ParticleEmitterTokenizer.cs" company="Urs Müller">
 // </copyright>
 
-namespace AdvancedParticleSystem.ParticleSystem.Parser
+namespace AdvancedParticleSystemMG38.ParticleSystem.Parser
 {
     using System;
     using System.Collections.Generic;

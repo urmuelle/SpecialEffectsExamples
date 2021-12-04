@@ -1,7 +1,7 @@
 ﻿// <copyright file="ParticleEventVelocityZ.cs" company="Urs Müller">
 // </copyright>
 
-namespace AdvancedParticleSystem.ParticleSystem.Parser
+namespace AdvancedParticleSystemMG38.ParticleSystem.Parser
 {
     using SpecialEffectsExamplesLibrary;
     using System;

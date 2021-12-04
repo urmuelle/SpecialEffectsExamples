@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdvancedParticleSystemMG38"
-        xmlns:scene="clr-namespace:AdvancedParticleSystem.Scene"
+        xmlns:scene="clr-namespace:AdvancedParticleSystemMG38.Scene"
         xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
         Title="MainWindow" Height="517.953" Width="1319.28" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight">

@@ -10,7 +10,7 @@ namespace AdvancedParticleSystem.ViewModel
     using System.Windows;
     using System.Windows.Input;
     using System.Xml.Linq;
-    using AdvancedParticleSystem.Scene;
+    using AdvancedParticleSystemMG38.Scene;
     using Microsoft.Win32;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;

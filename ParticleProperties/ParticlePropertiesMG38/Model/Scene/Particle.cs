@@ -1,17 +1,14 @@
 ﻿// <copyright file="Particle.cs" company="Urs Müller">
 // </copyright>
 
-namespace AdvancedParticleSystemMG38.ParticleSystem
+namespace ParticlePropertiesMG38.Model.Scene
 {
-    using System.Collections.Generic;
-    using AdvancedParticleSystemMG38.ParticleSystem.Parser;
     using Microsoft.Xna.Framework;
 
     public class Particle
     {
         private float weight;
         private float size;
-        private float sizeStep;
         private float lifetime;
         private float age;
 
@@ -22,9 +19,6 @@ namespace AdvancedParticleSystemMG38.ParticleSystem
         private Vector3[] vertexPositions;
         private Vector3 position;
         private Vector3 direction;
-        private Vector3 directionStep;
-        private float eventTimer;
-        private int curEvent;
 
         private bool alive;
 
@@ -70,19 +64,6 @@ namespace AdvancedParticleSystemMG38.ParticleSystem
             }
         }
 
-        public Vector3 DirectionStep
-        {
-            get
-            {
-                return directionStep;
-            }
-
-            set
-            {
-                directionStep = value;
-            }
-        }
-
         public Color Color
         {
             get { return color; }
@@ -107,12 +88,6 @@ namespace AdvancedParticleSystemMG38.ParticleSystem
             set { size = value; }
         }
 
-        public float SizeStep
-        {
-            get { return sizeStep; }
-            set { sizeStep = value; }
-        }
-
         public float Lifetime
         {
             get { return lifetime; }
@@ -123,18 +98,6 @@ namespace AdvancedParticleSystemMG38.ParticleSystem
         {
             get { return age; }
             set { age = value; }
-        }
-
-        public int CurEvent
-        {
-            get { return curEvent; }
-            set { curEvent = value; }
-        }
-
-        public float EventTimer
-        {
-            get { return eventTimer; }
-            set { eventTimer = value; }
         }
 
         public bool Alive
@@ -183,7 +146,6 @@ namespace AdvancedParticleSystemMG38.ParticleSystem
         {
             // age the particle
             age += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            eventTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // if this particle's age is greater than it's lifetime, it dies.
             if (age >= lifetime)
@@ -195,14 +157,10 @@ namespace AdvancedParticleSystemMG38.ParticleSystem
             position += direction * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             color = new Color(
-                color.R += (byte)(colorStep.R * (float)gameTime.ElapsedGameTime.TotalSeconds),
-                color.G += (byte)(colorStep.G * (float)gameTime.ElapsedGameTime.TotalSeconds),
-                color.B += (byte)(colorStep.B * (float)gameTime.ElapsedGameTime.TotalSeconds),
-                color.A += (byte)(colorStep.A * (float)gameTime.ElapsedGameTime.TotalSeconds));
-
-            direction += directionStep * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            size += sizeStep * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                color.R += colorStep.R,
+                color.G += colorStep.G,
+                color.B += colorStep.B,
+                color.A += colorStep.A);
 
             // Update corner vertices
             CalculateCornerVertices();

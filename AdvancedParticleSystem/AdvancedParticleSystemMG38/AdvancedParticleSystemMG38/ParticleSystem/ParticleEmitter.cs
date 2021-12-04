@@ -1,12 +1,12 @@
 ﻿// <copyright file="ParticleEmitter.cs" company="Urs Müller">
 // </copyright>
 
-namespace AdvancedParticleSystem.ParticleSystem
+namespace AdvancedParticleSystemMG38.ParticleSystem
 {
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
-    using AdvancedParticleSystem.ParticleSystem.Parser;
+    using AdvancedParticleSystemMG38.ParticleSystem.Parser;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Content;
     using Microsoft.Xna.Framework.Graphics;

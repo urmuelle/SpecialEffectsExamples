@@ -1,7 +1,7 @@
 ﻿// <copyright file="ParticleScene.cs" company="Urs Müller">
 // </copyright>
 
-namespace AdvancedParticleSystem.Scene
+namespace AdvancedParticleSystemMG38.Scene
 {
     using System;
     using Microsoft.Xna.Framework;
