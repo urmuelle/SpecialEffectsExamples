@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\SpecialEffectsExamples.Content.Pipeline\AdvancedParticleSystem\AdvancedParticleSystemContent.cs" Link="AdvancedParticleSystem\AdvancedParticleSystemContent.cs" />
+    <Compile Include="..\SpecialEffectsExamples.Content.Pipeline\AdvancedParticleSystem\AdvancedParticleSystemContentCompiler.cs" Link="AdvancedParticleSystem\AdvancedParticleSystemContentCompiler.cs" />
+    <Compile Include="..\SpecialEffectsExamples.Content.Pipeline\AdvancedParticleSystem\AdvancedParticleSystemContentImporter.cs" Link="AdvancedParticleSystem\AdvancedParticleSystemContentImporter.cs" />
+    <Compile Include="..\SpecialEffectsExamples.Content.Pipeline\AdvancedParticleSystem\AdvancedParticleSystemProcessor.cs" Link="AdvancedParticleSystem\AdvancedParticleSystemProcessor.cs" />
+    <Compile Include="..\SpecialEffectsExamples.Content.Pipeline\ParticleSystemProperties\ParticleSystemPropertiesContent.cs" Link="ParticleSystemProperties\ParticleSystemPropertiesContent.cs" />
+    <Compile Include="..\SpecialEffectsExamples.Content.Pipeline\ParticleSystemProperties\ParticleSystemPropertiesContentCompiler.cs" Link="ParticleSystemProperties\ParticleSystemPropertiesContentCompiler.cs" />
+    <Compile Include="..\SpecialEffectsExamples.Content.Pipeline\ParticleSystemProperties\ParticleSystemPropertiesContentImporter.cs" Link="ParticleSystemProperties\ParticleSystemPropertiesContentImporter.cs" />
+    <Compile Include="..\SpecialEffectsExamples.Content.Pipeline\ParticleSystemProperties\ParticleSystemPropertiesProcessor.cs" Link="ParticleSystemProperties\ParticleSystemPropertiesProcessor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.Content.Pipeline" Version="3.8.1.303">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdvancedParticleSystem\" />
+    <Folder Include="ParticleSystemProperties\" />
+  </ItemGroup>
+</Project>

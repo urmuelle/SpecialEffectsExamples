@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\AdvancedParticleSystemContentReader.cs" Link="AdvancedParticleSystem\AdvancedParticleSystemContentReader.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEmitterToken.cs" Link="AdvancedParticleSystem\Parser\ParticleEmitterToken.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEmitterTokenizer.cs" Link="AdvancedParticleSystem\Parser\ParticleEmitterTokenizer.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEvent.cs" Link="AdvancedParticleSystem\Parser\ParticleEvent.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventAlpha.cs" Link="AdvancedParticleSystem\Parser\ParticleEventAlpha.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventBlueColor.cs" Link="AdvancedParticleSystem\Parser\ParticleEventBlueColor.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventColor.cs" Link="AdvancedParticleSystem\Parser\ParticleEventColor.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventGreenColor.cs" Link="AdvancedParticleSystem\Parser\ParticleEventGreenColor.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventRedColor.cs" Link="AdvancedParticleSystem\Parser\ParticleEventRedColor.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventSequence.cs" Link="AdvancedParticleSystem\Parser\ParticleEventSequence.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventSize.cs" Link="AdvancedParticleSystem\Parser\ParticleEventSize.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventTimer.cs" Link="AdvancedParticleSystem\Parser\ParticleEventTimer.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventVelocity.cs" Link="AdvancedParticleSystem\Parser\ParticleEventVelocity.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventVelocityX.cs" Link="AdvancedParticleSystem\Parser\ParticleEventVelocityX.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventVelocityY.cs" Link="AdvancedParticleSystem\Parser\ParticleEventVelocityY.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Parser\ParticleEventVelocityZ.cs" Link="AdvancedParticleSystem\Parser\ParticleEventVelocityZ.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\Particle.cs" Link="AdvancedParticleSystem\Particle.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\AdvancedParticleSystem\ParticleEmitter.cs" Link="AdvancedParticleSystem\ParticleEmitter.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\ParticleProperties\Particle.cs" Link="ParticleProperties\Particle.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\ParticleProperties\ParticleEmitter.cs" Link="ParticleProperties\ParticleEmitter.cs" />
+    <Compile Include="..\SpecialEffectsExamples.ParticleSystem\ParticleProperties\ParticlePropertiesContentReader.cs" Link="ParticleProperties\ParticlePropertiesContentReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdvancedParticleSystem\Parser\" />
+    <Folder Include="ParticleProperties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpecialEffectsExamplesLibraryMG38_1\SpecialEffectsExamplesLibrary.csproj" />
+  </ItemGroup>
+</Project>
