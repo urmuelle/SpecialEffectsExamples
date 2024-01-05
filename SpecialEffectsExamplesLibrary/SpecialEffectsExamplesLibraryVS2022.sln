@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecialEffectsExamplesLibra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecialEffectsExamples.Content.Pipeline", "SpecialEffectsExamples.Content.PipelineMG38_1\SpecialEffectsExamples.Content.Pipeline.csproj", "{09F1C5B0-7EAF-41EA-8E77-A4D63C8175CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecialEffectsExamples.ParticleSystem", "SpecialEffectsExamples.ParticleSystemMG38_1\SpecialEffectsExamples.ParticleSystem.csproj", "{0B5F0C21-714C-44CE-8FB8-1967D0A8CF83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecialEffectsExamplesLibrary.ParticleSystem", "SpecialEffectsExamplesLibrary.ParticleSystemMG38_1\SpecialEffectsExamplesLibrary.ParticleSystem.csproj", "{0B5F0C21-714C-44CE-8FB8-1967D0A8CF83}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BC8A16F6-47DD-4370-9CC7-F8A72E3EC101} = {BC8A16F6-47DD-4370-9CC7-F8A72E3EC101}
 	EndProjectSection
