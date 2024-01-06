@@ -57,7 +57,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="C:\Spieleprogrammierung\Monogame\Projekte\SpecialEffectsExamples\AdvancedParticleSystem\AdvancedParticleSystemMG38_1\.editorconfig" />
+    <AdditionalFiles Include="C:\Spieleprogrammierung\Monogame\Projekte\SpecialEffectsExamples\AdvancedParticleSystem\AdvancedParticleSystemMG38_1\.editorconfig" />
   </ItemGroup>
 
 </Project>
