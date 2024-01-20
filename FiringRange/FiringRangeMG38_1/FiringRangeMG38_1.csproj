@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RollForward>Major</RollForward>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <TieredCompilation>false</TieredCompilation>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SpecialEffectsExamples.Content.Pipeline">
+      <HintPath>..\..\SpecialEffectsExamplesLibrary\SpecialEffectsExamples.Content.PipelineMG38_1\bin\Debug\net6.0\SpecialEffectsExamples.Content.Pipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecialEffectsExamplesLibrary">
+      <HintPath>..\..\SpecialEffectsExamplesLibrary\SpecialEffectsExamplesLibraryMG38_1\bin\Debug\net6.0\SpecialEffectsExamplesLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecialEffectsExamplesLibrary.ParticleSystem">
+      <HintPath>..\..\SpecialEffectsExamplesLibrary\SpecialEffectsExamplesLibrary.ParticleSystemMG38_1\bin\Debug\net6.0\SpecialEffectsExamplesLibrary.ParticleSystem.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+    <Message Text="Restoring dotnet tools" Importance="High" />
+    <Exec Command="dotnet tool restore" />
+  </Target>
+</Project>
