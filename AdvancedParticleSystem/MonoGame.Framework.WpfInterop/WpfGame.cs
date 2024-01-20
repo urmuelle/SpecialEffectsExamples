@@ -41,10 +41,7 @@ namespace MonoGame.Framework.WpfInterop
 			get { return _content; }
 			set
 			{
-				if (value == null)
-					throw new ArgumentNullException();
-
-				_content = value;
+                _content = value ?? throw new ArgumentNullException();
 			}
 		}
 

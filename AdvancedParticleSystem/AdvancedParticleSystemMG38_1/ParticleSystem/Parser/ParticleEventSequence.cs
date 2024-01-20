@@ -17,8 +17,6 @@ namespace AdvancedParticleSystemMG38_1.ParticleSystem.Parser
     public class ParticleEventSequence
     {
         private const int MaxNumParticles = 2000;
-
-        private Texture2D? particleTexture;
         private Blend destBlendMode;
         private Blend srcBlendMode;
 
@@ -37,7 +35,7 @@ namespace AdvancedParticleSystemMG38_1.ParticleSystem.Parser
 
         public ParticleEventSequence()
         {
-            particleTexture = null;
+            Texture = null;
             particles = null;
             helper = new Helper();
             Events = new List<ParticleEvent>();
@@ -94,16 +92,12 @@ namespace AdvancedParticleSystemMG38_1.ParticleSystem.Parser
 
         public string TextureFilename { get; internal set; }
 
-        public Texture2D Texture
-        {
-            get { return particleTexture; }
-            set { this.particleTexture = value; }
-        }
+        public Texture2D? Texture { get; set; }
 
         public void LoadContent(ContentManager contentManager, GraphicsDevice graphicsDevice)
         {
             particles = new RecyclingArray<Particle>(MaxNumParticles);
-            particleTexture = contentManager.Load<Texture2D>(TextureFilename);
+            Texture = contentManager.Load<Texture2D>(TextureFilename);
         }
 
         public void RunEvents(ref Particle part)
@@ -153,7 +147,7 @@ namespace AdvancedParticleSystemMG38_1.ParticleSystem.Parser
             emitRadius = new MinMax<Vector3>(new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.0f, 0.0f, 0.0f));
             Events.Clear();
             particles = null;
-            particleTexture = null;
+            Texture = null;
         }
 
         public void CreateNewParticle(Vector3 partSysPos)
@@ -294,7 +288,7 @@ namespace AdvancedParticleSystemMG38_1.ParticleSystem.Parser
 
             var shaderEffect = new BasicEffect(graphicsDevice)
             {
-                Texture = particleTexture,
+                Texture = Texture,
                 World = Matrix.Identity,
                 View = viewMatrix,
                 Projection = projectionMatrix,

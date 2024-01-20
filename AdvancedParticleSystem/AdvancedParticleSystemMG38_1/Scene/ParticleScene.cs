@@ -14,8 +14,6 @@ namespace AdvancedParticleSystemMG38_1.Scene
     public class ParticleScene : WpfGame
     {
         private IGraphicsDeviceService graphicsDeviceManager;
-        private WpfKeyboard keyboard;
-        private WpfMouse mouse;
 
         private GroundPlane groundPlane;
         private ParticleEmitter particleSystem;
@@ -65,8 +63,6 @@ namespace AdvancedParticleSystemMG38_1.Scene
 
             // wpf and keyboard need reference to the host control in order to receive input
             // this means every WpfGame control will have it's own keyboard & mouse manager which will only react if the mouse is in the control
-            keyboard = new WpfKeyboard(this);
-            mouse = new WpfMouse(this);
             showGround = false;
 
             // must be called after the WpfGraphicsDeviceService instance was created
@@ -94,10 +90,6 @@ namespace AdvancedParticleSystemMG38_1.Scene
 
         protected override void Update(GameTime time)
         {
-            // every update we can now query the keyboard & mouse for our WpfGame
-            var mouseState = mouse.GetState();
-            var keyboardState = keyboard.GetState();
-
             particleSystem.Update(time);
         }
 

@@ -9,6 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.5.1" />
     <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
@@ -50,14 +58,6 @@
     <None Update="Content\Snowflake1.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EditorConfigFiles Remove="C:\Spieleprogrammierung\Monogame\Projekte\SpecialEffectsExamples\AdvancedParticleSystem\AdvancedParticleSystemMG38_1\.editorconfig" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <AdditionalFiles Include="C:\Spieleprogrammierung\Monogame\Projekte\SpecialEffectsExamples\AdvancedParticleSystem\AdvancedParticleSystemMG38_1\.editorconfig" />
   </ItemGroup>
 
 </Project>

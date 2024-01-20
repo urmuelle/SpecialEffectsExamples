@@ -4,9 +4,9 @@
 
 namespace AdvancedParticleSystemMG38_1.ParticleSystem.Parser
 {
-    using SpecialEffectsExamplesLibrary;
     using System;
     using System.Collections.Generic;
+    using SpecialEffectsExamplesLibrary;
 
     public class ParticleEventVelocityZ : ParticleEvent
     {

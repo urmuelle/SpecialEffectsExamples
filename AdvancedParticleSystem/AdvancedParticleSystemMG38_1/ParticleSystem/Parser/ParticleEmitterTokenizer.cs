@@ -49,21 +49,21 @@ namespace AdvancedParticleSystemMG38_1.ParticleSystem.Parser
     {
         private const int NUMBLENDINGMODES = 13;
 
-        private static BLENDINGMODE[] blendingModes =
+        private static readonly BLENDINGMODE[] BlendingModes =
         {
-            new BLENDINGMODE { Name = "D3DBLEND_ONE", Mode = LocalBlendState.One },
-            new BLENDINGMODE { Name = "D3DBLEND_ZERO", Mode = LocalBlendState.Zero },
-            new BLENDINGMODE { Name = "D3DBLEND_SRCCOLOR", Mode = LocalBlendState.SourceColor },
-            new BLENDINGMODE { Name = "D3DBLEND_INVSRCCOLOR", Mode = LocalBlendState.InverseSourceColor },
-            new BLENDINGMODE { Name = "D3DBLEND_SRCALPHA", Mode = LocalBlendState.SourceAlpha },
-            new BLENDINGMODE { Name = "D3DBLEND_INVSRCALPHA", Mode = LocalBlendState.InverseSourceAlpha },
-            new BLENDINGMODE { Name = "D3DBLEND_DESTCOLOR", Mode = LocalBlendState.DestinationColor },
-            new BLENDINGMODE { Name = "D3DBLEND_INVDESTCOLOR", Mode = LocalBlendState.InverseDestinationColor },
-            new BLENDINGMODE { Name = "D3DBLEND_DESTALPHA", Mode = LocalBlendState.DestinationAlpha },
-            new BLENDINGMODE { Name = "D3DBLEND_INVDESTALPHA", Mode = LocalBlendState.InverseDestinationAlpha },
-            new BLENDINGMODE { Name = "D3DBLEND_BLENDFACTOR", Mode = LocalBlendState.BlendFactor },
-            new BLENDINGMODE { Name = "D3DBLEND_INVBLENDFACTOR", Mode = LocalBlendState.InverseBlendFactor },
-            new BLENDINGMODE { Name = "D3DBLEND_SRCALPHASAT", Mode = LocalBlendState.SourceAlphaSaturation },
+            new () { Name = "D3DBLEND_ONE", Mode = LocalBlendState.One },
+            new () { Name = "D3DBLEND_ZERO", Mode = LocalBlendState.Zero },
+            new () { Name = "D3DBLEND_SRCCOLOR", Mode = LocalBlendState.SourceColor },
+            new () { Name = "D3DBLEND_INVSRCCOLOR", Mode = LocalBlendState.InverseSourceColor },
+            new () { Name = "D3DBLEND_SRCALPHA", Mode = LocalBlendState.SourceAlpha },
+            new () { Name = "D3DBLEND_INVSRCALPHA", Mode = LocalBlendState.InverseSourceAlpha },
+            new () { Name = "D3DBLEND_DESTCOLOR", Mode = LocalBlendState.DestinationColor },
+            new () { Name = "D3DBLEND_INVDESTCOLOR", Mode = LocalBlendState.InverseDestinationColor },
+            new () { Name = "D3DBLEND_DESTALPHA", Mode = LocalBlendState.DestinationAlpha },
+            new () { Name = "D3DBLEND_INVDESTALPHA", Mode = LocalBlendState.InverseDestinationAlpha },
+            new () { Name = "D3DBLEND_BLENDFACTOR", Mode = LocalBlendState.BlendFactor },
+            new () { Name = "D3DBLEND_INVBLENDFACTOR", Mode = LocalBlendState.InverseBlendFactor },
+            new () { Name = "D3DBLEND_SRCALPHASAT", Mode = LocalBlendState.SourceAlphaSaturation },
         };
 
         public List<ParticleEmitterToken> TokenVector = new ();
@@ -353,10 +353,10 @@ namespace AdvancedParticleSystemMG38_1.ParticleSystem.Parser
             {
                 // careful here... must match on both string and size
                 // (i.e., to differentiate between D3DBLEND_SRCALPHA and D3DBLEND_SRCALPHASAT).
-                if (tokenIter.Current.StringValue.Contains(blendingModes[q].Name) &&
-                    tokenIter.Current.StringValue.Length == blendingModes[q].Name.Length)
+                if (tokenIter.Current.StringValue.Contains(BlendingModes[q].Name) &&
+                    tokenIter.Current.StringValue.Length == BlendingModes[q].Name.Length)
                 {
-                    alphaBlendMode = blendingModes[q].Mode;
+                    alphaBlendMode = BlendingModes[q].Mode;
 
                     ParticleEmitterTokenizer.NextToken(ref tokenIter);
 
