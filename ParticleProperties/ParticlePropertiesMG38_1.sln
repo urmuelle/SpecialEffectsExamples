@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParticlePropertiesMG38_1", "ParticlePropertiesMG38_1\ParticlePropertiesMG38_1.csproj", "{8D16AEDE-C668-4F00-912A-76279AADE336}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParticleSceneMG38_1", "..\AdvancedParticleSystem\ParticleSceneMG38_1\ParticleSceneMG38_1.csproj", "{77E5A17A-C5EB-4B74-9371-92737E680FC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.Framework.WpfInterop", "..\AdvancedParticleSystem\MonoGame.Framework.WpfInterop\MonoGame.Framework.WpfInterop.csproj", "{CDB59E1C-A300-4566-A35E-9422CFBA05A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D16AEDE-C668-4F00-912A-76279AADE336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D16AEDE-C668-4F00-912A-76279AADE336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D16AEDE-C668-4F00-912A-76279AADE336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D16AEDE-C668-4F00-912A-76279AADE336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77E5A17A-C5EB-4B74-9371-92737E680FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77E5A17A-C5EB-4B74-9371-92737E680FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77E5A17A-C5EB-4B74-9371-92737E680FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77E5A17A-C5EB-4B74-9371-92737E680FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB59E1C-A300-4566-A35E-9422CFBA05A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB59E1C-A300-4566-A35E-9422CFBA05A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB59E1C-A300-4566-A35E-9422CFBA05A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB59E1C-A300-4566-A35E-9422CFBA05A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6ACF934-27A3-47A2-BFEA-FE2A13ED782D}
+	EndGlobalSection
+EndGlobal
